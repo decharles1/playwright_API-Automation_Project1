@@ -31,6 +31,13 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Debug env presence
+        run: |
+          echo "API_BASE_URL exists? ${{ env.API_BASE_URL != '' }}"
+          echo "USER_EMAIL exists? ${{ env.USER_EMAIL != '' }}"
+          echo "USER_PASSWORD exists? ${{ env.USER_PASSWORD != '' }}"
+          echo "TEST_ENV exists? ${{ env.TEST_ENV != '' }}"
+
       - name: Run Tests
         run: npx playwright test
 
