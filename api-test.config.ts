@@ -5,6 +5,7 @@ export const config = {
     apiUrl: process.env.API_BASE_URL ?? '',
     userEmail: process.env.USER_EMAIL ?? '',
     userPassword: process.env.USER_PASSWORD ?? ''
+    webUrl: process.env.WEB_BASE_URL ?? ''
 
 }
 
